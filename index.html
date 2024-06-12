@@ -11,16 +11,16 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="#">
+                    <a href="javascript:void(0)" onclick="scrollToSection('banner')">
                         <img src="images/logo.svg" alt="Kensaltensi Logo" title="Kensaltensi">
                     </a>
                 </div>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('services')">Services</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('projects')">Projects</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('footer')">Contact</a></li>
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -32,8 +32,11 @@
         </nav>
     </header>
     <main>
-        <section class="banner-section">
+        <section class="banner-section" id="banner">
             <div class="container">
+                <a href="javascript:void(0)" class="banner-logo">
+                    <img src="images/logo.svg" alt="Kensaltensi Logo" title="Kensaltensi">
+                </a>
                 <p>Revolutionizing the Digital Landscape</p>
                 <div class="banner-img">
                     <img loading="lazy" src="./images/banner-img.webp" alt="banner-img">
@@ -112,250 +115,136 @@
         <section class="services-setup" id="about">
             <div class="container">
                 <h2>Services that set you up <br>for success</h2>
-                <div class="services-list flex">
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>Web2 Development</p>
-                            <p>Building tomorrow's web today - Expert Web2 development services for your business</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Intuitive</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>Responsive</p>
-                                </div>
-                            </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Scalable</p>
-                                </div>
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Maintenance friendly</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="services-list--item flex">
+                    <div class="services-list--item--info">
+                        <p>Blockchain consultancy</p>
+                        <p>Navigating the Blockchain World - Expert consultancy for seamless integration and innovation</p>
                     </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>Blockchain consultancy</p>
-                            <p>Navigating the Blockchain World - Expert consultancy for seamless integration and innovation</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Decentralised</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>Acyclic graph architecture</p>
-                                </div>
+                    <div class="services-list--item--content">
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>01.</p>
+                                <p>Decentralised</p>
                             </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Developer friendly</p>
-                                </div>
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Transaction dashboard</p>
-                                </div>
+                            <div class="flex">
+                                <p>02.</p>
+                                <p>Acyclic graph architecture</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>Decentralised Nodes Management</p>
-                            <p>Optimizing Decentralization: Comprehensive solutions for efficient nodes management</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Plug and play</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>CRUD for nodes</p>
-                                </div>
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Health monitoring</p>
-                                </div>
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Seamless Web3 integration</p>
-                                </div>
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>03.</p>
+                                <p>Developer friendly</p>
                             </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>05.</p>
-                                    <p>Self Learning and Self Correcting</p>
-                                </div>
-                                <div class="flex">
-                                    <p>06.</p>
-                                    <p>Performance analytics</p>
-                                </div>
-                                <div class="flex">
-                                    <p>07.</p>
-                                    <p>Reward management</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>Tokenomics</p>
-                            <p>Fueling Digital Economies: Strategic tokenomics design for sustainable growth</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Smart Contracts</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>Liquidity / Balancer Pools</p>
-                                </div>
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Rewards estimation and calculation</p>
-                                </div>
-                            </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Staking</p>
-                                </div>
-                                <div class="flex">
-                                    <p>05.</p>
-                                    <p>Token dashboard</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>AI Solutions</p>
-                            <p>Empowering Intelligence: Cutting-Edge AI Solutions for simplifying customer touchpoints and transformational business advantages</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Large language model based</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>Customized AI solutions</p>
-                                </div>
-                            </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Actionable AI</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>QA / Testing</p>
-                            <p>Ensuring Excellence: Rigorous QA and testing services for flawless performance</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Test strategy</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>Test automation</p>
-                                </div>
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Performance and load testing</p>
-                                </div>
-                            </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Test cases development</p>
-                                </div>
-                                <div class="flex">
-                                    <p>05.</p>
-                                    <p>Regression</p>
-                                </div>
-                                <div class="flex">
-                                    <p>06.</p>
-                                    <p>Smart contracts testing</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services-list--item flex">
-                        <div class="services-list--item--info">
-                            <p>DevOps</p>
-                            <p>Accelerating Development: Integrated DevOps services for seamless deployment and robust operations</p>
-                        </div>
-                        <div class="services-list--item--content">
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>01.</p>
-                                    <p>Dev, QA, Pre-Prod, Prod environment setup</p>
-                                </div>
-                                <div class="flex">
-                                    <p>02.</p>
-                                    <p>CI/CD pipelines</p>
-                                </div>
-                                <div class="flex">
-                                    <p>03.</p>
-                                    <p>Tool based code review</p>
-                                </div>
-                                <div class="flex">
-                                    <p>04.</p>
-                                    <p>Security testing</p>
-                                </div>
-                                <div class="flex">
-                                    <p>05.</p>
-                                    <p>Cloud and on-prem infrastructure</p>
-                                </div>
-                            </div>
-                            <div class="flex services-data">
-                                <div class="flex">
-                                    <p>06.</p>
-                                    <p>Proactive monitoring</p>
-                                </div>
-                                <div class="flex">
-                                    <p>07.</p>
-                                    <p>Backup and business continuity</p>
-                                </div>
-                                <div class="flex">
-                                    <p>08.</p>
-                                    <p>Restoration testing</p>
-                                </div>
-                                <div class="flex">
-                                    <p>09.</p>
-                                    <p>Change and Patch management</p>
-                                </div>
+                            <div class="flex">
+                                <p>04.</p>
+                                <p>Transaction dashboard</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn-outline" title="View all Services">View all Services</a>
+                <div class="services-list--item flex">
+                    <div class="services-list--item--info">
+                        <p>Decentralised Nodes Management</p>
+                        <p>Optimizing Decentralization: Comprehensive solutions for efficient nodes management</p>
+                    </div>
+                    <div class="services-list--item--content">
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>01.</p>
+                                <p>Plug and play</p>
+                            </div>
+                            <div class="flex">
+                                <p>02.</p>
+                                <p>Self Learning and Self Correcting</p>
+                            </div>
+                            <div class="flex">
+                                <p>03.</p>
+                                <p>Health monitoring</p>
+                            </div>
+                            <div class="flex">
+                                <p>04.</p>
+                                <p>Seamless Web3 integration</p>
+                            </div>
+                        </div>
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>05.</p>
+                                <p>CRUD for nodes</p>
+                            </div>
+                            <div class="flex">
+                                <p>06.</p>
+                                <p>Performance analytics</p>
+                            </div>
+                            <div class="flex">
+                                <p>07.</p>
+                                <p>Reward management</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-list--item flex">
+                    <div class="services-list--item--info">
+                        <p>Tokenomics</p>
+                        <p>Fueling Digital Economies: Strategic tokenomics design for sustainable growth</p>
+                    </div>
+                    <div class="services-list--item--content">
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>01.</p>
+                                <p>Smart Contracts</p>
+                            </div>
+                            <div class="flex">
+                                <p>02.</p>
+                                <p>Liquidity / Balancer Pools</p>
+                            </div>
+                            <div class="flex">
+                                <p>03.</p>
+                                <p>Rewards estimation and calculation</p>
+                            </div>
+                        </div>
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>04.</p>
+                                <p>Staking</p>
+                            </div>
+                            <div class="flex">
+                                <p>05.</p>
+                                <p>Token dashboard</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services-list--item flex">
+                    <div class="services-list--item--info">
+                        <p>AI Solutions</p>
+                        <p>Empowering Intelligence: Cutting-Edge AI Solutions for simplifying customer touchpoints and transformational business advantages</p>
+                    </div>
+                    <div class="services-list--item--content">
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>01.</p>
+                                <p>Large language model based</p>
+                            </div>
+                            <div class="flex">
+                                <p>02.</p>
+                                <p>Customized AI solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex services-data">
+                            <div class="flex">
+                                <p>03.</p>
+                                <p>Actionable AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="btn-outline" title="View all Services">View all Services</a>
             </div>
         </section>
         <section class="case-studies" id="projects">
             <div class="container">
-                <h2>Case studies</h2>
+                <h2>projects</h2>
                 <div class="case-studies--items">
                     <div class="case-studies--item">
                         <div>
@@ -408,85 +297,20 @@
                         </div>
                         <img src="images/case-study-2.webp" alt="Jenny Co">
                     </div>
-                    <div class="case-studies--item">
-                        <div>
-                            <div class="flex">
-                                <p>03.</p>
-                                <p>nokpay</p>
-                            </div>
-                            <p class="case-studies--item--des">Nokpay is a financial empowerment platform connecting Africa through cutting edge centralised and decentralised technologies. We helped design the companies brand identity, brand guidelines as well as their go to market White-paper.</p>
-                            <div class="cats">
-                                <div class="cats--tab">
-                                    <p>Branding</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>UI & UX</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>Front-end Development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="images/case-study-3.webp" alt="Jenny Co">
-                    </div>
-                    <div class="case-studies--item">
-                        <div>
-                            <div class="flex">
-                                <p>04.</p>
-                                <p>alkimi</p>
-                            </div>
-                            <p class="case-studies--item--des">Alkimi is a decentralised replacement to the inefficient legacy programmatic ad exchanges with the mission to restore the value exchange between advertisers, publishers and users. We helped design Alkimi’s brand identity as well as designing and developing their new website.</p>
-                            <div class="cats">
-                                <div class="cats--tab">
-                                    <p>Branding</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>UI & UX</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>Front-end Development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="images/case-study-4.webp" alt="Jenny Co">
-                    </div>
-                    <div class="case-studies--item">
-                        <div>
-                            <div class="flex">
-                                <p>05.</p>
-                                <p>alkimi</p>
-                            </div>
-                            <p class="case-studies--item--des">Alex The Alkimist is an NFT project we created on the polygon blockchain. This series was a mutation from the first series we launched last year. Those who owned a series 1 Alex the Alkimist  were able to transform their NFT into a mutated one.</p>
-                            <div class="cats">
-                                <div class="cats--tab">
-                                    <p>UI & UX</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>Front-end Development</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>NFTs</p>
-                                </div>
-                                <div class="cats--tab">
-                                    <p>Smart Contracts</p>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="last-img" src="images/case-study-5.webp" alt="Jenny Co">
-                    </div>
                 </div>
+                <a href="javascript:void(0)" class="btn-outline" title="View all Services">View more projects</a>
             </div>
         </section>
         <section class="cta" id="contact">
             <div class="container">
                 <h2>Get in <i>touch</i></h2>
                 <p>Get in touch with us today, and let's bring your digital dreams to life!</p>
-                <a href="">i’m ready</a>
+                <a href="javascript:void(0)" onclick="scrollToSection('footer')">i’m ready</a>
                 <img src="images/design.webp" alt="design" />
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="container">
             <img src="images/kensaltensi.svg" alt="kensaltensi" title="kensaltensi">
             <div class="footer-row flex">
@@ -498,6 +322,7 @@
             <form action="" class="contact-form">
                 <input type="email" name="email" id="email" required placeholder="Email" />
                 <input type="tel" name="phone" id="phone" maxlength="10" minlength="10" required placeholder="Phone" />
+                <textarea rows="4" name="message" id="message" placeholder="Message"></textarea>
                 <button title="submit" type="submit">let’s work together</button>
             </form>
         </div>
@@ -512,6 +337,34 @@
                 $("#mainListDiv").fadeIn();
 
             });
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('header').fadeIn();
+                } else {
+                    $('header').fadeOut();
+                }
+            });
+            $(document).ready(function() {
+                var $scrollDiv = $('.scrollable-div');
+                var $scrollContent = $('.scrollable-div--scroll');
+                var scrollSpeed = 7000;
+                var pauseTime = 0;
+                var $clone = $scrollContent.clone();
+                $scrollContent.append($clone);
+                function startScrolling() {
+                    var contentHeight = $scrollContent.height() / 2;
+                    $scrollDiv.animate({ scrollTop: contentHeight }, scrollSpeed, 'linear', function() {
+                    $scrollDiv.scrollTop(0);
+                    startScrolling();
+                    });
+                }
+                startScrolling();
+            });
+            function scrollToSection(sectionId) {
+                $('html, body').animate({
+                    scrollTop: $('#' + sectionId).offset().top
+                }, 100);
+            }
         </script>
     </footer>
 </body>

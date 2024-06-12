@@ -47,6 +47,16 @@ h2 {
 }
 .banner-section {
     padding: 112px 0;
+    position: relative;
+}
+.banner-logo {
+    position: absolute;
+    top: 95px;
+    left: 220px;
+    width: 125px;
+}
+.banner-logo img {
+    max-width: 100%;
 }
 .banner-section .container {
    max-width: 1406px;
@@ -195,11 +205,13 @@ h2 {
 .scrollable-div {
     position: relative;
     z-index: 1;
+    height: 250px;
+    overflow: hidden;
 }
 .scrollable-div p {
     font-size: 90px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: .9;
     letter-spacing: -0.04em;
     text-align: left;
     color: #F1F3E5;
@@ -210,20 +222,21 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 242px;
+    height: 80px;
     background: rgb(0,0,0);
     z-index: 1;
-    background: linear-gradient(#1B1B1B, #1B1B1B00);
+    background: linear-gradient(#1B1B1B 40%, #1B1B1B00);
 }
 .blank:last-child {
-    background: linear-gradient(#1B1B1B00, #1B1B1B);
-    bottom: 0;
+    background: linear-gradient(#1B1B1B00 40%, #1B1B1B);
+    bottom: -2px;
+    top: unset;
 }
 .scrollable-div--scroll {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    padding: 20px 0;
-    margin: -242px 0;
+    margin-top: -80px;
+    padding-top: 80px;
 }
 .scrollable-div--scroll::-webkit-scrollbar {
     display: none;
@@ -258,12 +271,35 @@ h2 {
     gap: 100px;
     justify-content: space-between;
 }
-.services-list--item:not(:last-child) {
+.services-list--item {
+    position: sticky;
+    bottom: unset;
+    /* bottom: 0; */
+    top: 300px;
+    z-index: 1;
+    background-color: #0A0A0A;
+    min-height: 350px;
+}
+.services-setup h2 {
+    position: sticky;
+    top: 155px;
+}
+.services-list--item + .services-list--item {
+    z-index: 2;
+}
+.services-list--item + .services-list--item + .services-list--item {
+    z-index: 3;
+}
+.services-list--item + .services-list--item + .services-list--item + .services-list--item {
+    z-index: 4;
+}
+.services-list--item:not(:nth-last-child(2)) {
     border-bottom: 1px solid #FFFFFF26;
     padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 .services-list--item--info {
-    width: 296px;
+    width: 302px;
 }
 .services-list--item--info p {
     font-family: Helvetica;
@@ -283,13 +319,11 @@ h2 {
 }
 .services-list--item--content {
     gap: 65px;
-    width: 699px;
+    width: 60%;
     justify-content: space-between;
-    padding-right: 140px;
     display: flex;
 }
 .services-data {
-    width: 231px;
     flex-direction: column;
     gap: 48px;
 }
@@ -317,7 +351,7 @@ h2 {
     color: white;
 }
 .services-data:last-child {
-    width: 363px;
+    width: 350px;
 }
 .btn-outline {
     padding: 6px 24px 6px 24px;
@@ -329,12 +363,14 @@ h2 {
     line-height: 18.2px;
     letter-spacing: -0.01em;
     color: white;
+    position: relative;
+    z-index: 5;
 }
 .btn-outline:hover {
     color: #1B1B1B;
     background-color: white;
 }
-.services-list + .btn-outline {
+.btn-outline {
     margin: 60px 0 0 auto;
     display: block;
     width: fit-content;
@@ -529,7 +565,7 @@ footer .container img {
     gap: 25px;
     flex-wrap: wrap;
 }
-.contact-form input {
+.contact-form input, .contact-form textarea {
     width: calc(50% - (25px/2));
     border: none;
     border-bottom: 1px solid #FFFFFF66;
@@ -547,10 +583,14 @@ footer .container img {
     text-align: left;
     color: #F7FFC6;
 }
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
 .contact-form input:focus {
     border-bottom: 1px solid #a6ba20;
 }
-.contact-form input::placeholder {
+.contact-form input::placeholder, .contact-form textarea::placeholder {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -561,7 +601,7 @@ footer .container img {
     opacity: 1;
     text-transform: uppercase;
 } 
-.contact-form input::-ms-input-placeholder { /* Edge 12 -18 */
+.contact-form input::-ms-input-placeholder, .contact-form textarea::-ms-input-placeholder { /* Edge 12 -18 */
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -598,10 +638,17 @@ footer .container img {
     color: #1F2249;
 }
 /* Header */
+header {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    background-color: #1E1E1E;
+}
 .nav {
     width: 100%;
-    height: 65px;
-    line-height: 65px;
+    height: fit-content;
     text-align: center;
 }
 .nav div.logo {
@@ -611,20 +658,22 @@ footer .container img {
     padding-left: 3rem;
 }
 .nav div.logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 2.5rem;
+    height: fit-content;
+    display: flex;
+    align-items: center;
 }
 .nav div.logo a:hover {
     color: #00E676;
 }
 .nav div.main_list {
-    height: 65px;
-    float: right;
+    margin-left: auto;
+}
+header .container {
+    display: flex;
+    align-items: center;
 }
 .nav div.main_list ul {
     width: 100%;
-    height: 65px;
     display: flex;
     list-style: none;
     margin: 0;
@@ -632,7 +681,6 @@ footer .container img {
 }
 .nav div.main_list ul li {
     width: auto;
-    height: 65px;
     padding: 0;
     padding-right: 48px;
 }
@@ -919,7 +967,6 @@ footer .container img {
         width: 100%;
     }
     .nav {
-        padding-bottom: 0;
         height: fit-content;
     }
     .nav .container {
@@ -944,18 +991,19 @@ footer .container img {
     }
     .nav div.main_list ul li {
         text-align: left;
+        line-height: 4;
     }
     .navTrigger  {
         top: -11px;
     }
     .scrollable-div p {
-        font-size: 30px;
+        font-size: 60px;
     }
     .blank {
         height: 50px;
     }
-    .scrollable-div--scroll {
-        margin: 0;
+    .scrollable-div {
+        height: 200px;
     }
     .nav div.show_list, .navTrigger {
         z-index: 999;
@@ -972,6 +1020,11 @@ footer .container img {
     }
     .case-studies--item > img {
         height: auto;
+    }
+    .banner-logo {
+        left: 70px;
+        top: 70px;
+        width: 100px;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -1091,5 +1144,21 @@ footer .container img {
         margin-top: 40px;
         margin-bottom: 30px;
         height: 120px;
+    }
+    .banner-logo {
+        left: 20px;
+        top: 10px;
+        width: 100px;
+    }
+    .services-data .flex p:last-child {
+        white-space: unset;
+        font-size: 14px;
+    }
+    .scrollable-div p {
+        font-size: 40px;
+    }
+    .scrollable-div {
+        height: 130px;
+        margin: 30px 0 70px;
     }
 }
