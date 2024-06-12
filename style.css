@@ -261,7 +261,7 @@ h2 {
 }
 .services-setup {
     background-color: #0A0A0A;
-    padding: 100px 0;
+    padding: 0 0 100px;
 }
 .services-list {
     gap: 40px;
@@ -275,14 +275,20 @@ h2 {
     position: sticky;
     bottom: unset;
     /* bottom: 0; */
-    top: 300px;
+    top: 301px;
     z-index: 1;
     background-color: #0A0A0A;
     min-height: 350px;
+    padding: 0 5px;
 }
 .services-setup h2 {
     position: sticky;
-    top: 155px;
+    top: 41px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    background-color: #0A0A0A;
+    z-index: 6;
 }
 .services-list--item + .services-list--item {
     z-index: 2;
