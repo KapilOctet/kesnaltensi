@@ -46,12 +46,12 @@ h2 {
     font-weight: 500;
 }
 .banner-section {
-    padding: 112px 0;
+    padding: 60px 0 112px;
     position: relative;
 }
 .banner-logo {
     position: absolute;
-    top: 95px;
+    top: 45px;
     left: 220px;
     width: 125px;
 }
