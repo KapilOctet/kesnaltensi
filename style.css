@@ -301,6 +301,11 @@ h2 {
 .events-row--image {
     position: relative;
 }
+.events-row--details {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
 .services-second-row {
     margin-top: 103px;
     gap: 20px;
@@ -1020,6 +1025,9 @@ header .container {
     }
     .events-row--image {
         height: auto;
+    }
+    .events-row--details { 
+        position: unset;
     }
 }
 @media only screen and (max-width: 991px) {
