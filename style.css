@@ -291,7 +291,6 @@ h2 {
 .events-row {
     display: flex;
     gap: 80px;
-    align-items: center;
 }
 .events-row > div {
     width: calc(50% - 40px);
@@ -301,17 +300,6 @@ h2 {
 }
 .events-row--image {
     position: relative;
-    height: 600px;
-    overflow-y: hidden;
-}
-.events-row--image::after {
-    position: absolute;
-    content: '';
-    top: 158px;
-    height: calc(100% - 158px);
-    width: 100%;
-    left: 0;
-    background: linear-gradient(0deg, rgba(27,27,27,1) 6%, rgba(249,254,203,0.499124649859944) 100%);
 }
 .services-second-row {
     margin-top: 103px;
