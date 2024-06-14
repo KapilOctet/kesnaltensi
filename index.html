@@ -17,10 +17,11 @@
                 </div>
                 <div id="mainListDiv" class="main_list">
                     <ul class="navlinks">
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('about')">About</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('videoSection')">About</a></li>
                         <li><a href="javascript:void(0)" onclick="scrollToSection('services')">Services</a></li>
                         <li><a href="javascript:void(0)" onclick="scrollToSection('projects')">Projects</a></li>
-                        <li><a href="javascript:void(0)" onclick="scrollToSection('footer')">Contact</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('events')">Events</a></li>
+                        <li><a href="javascript:void(0)" onclick="scrollToSection('contact')">Contact</a></li>
                     </ul>
                 </div>
                 <span class="navTrigger">
@@ -42,9 +43,6 @@
                     <img loading="lazy" src="./images/banner-img.webp" alt="banner-img">
                 </div>
                 <h1>Solutions for New <br/>Era of Internet</h1>
-                <p class="scroll">
-                    <a href="javascript:void(0)" onclick="scrollToSection('videoSection')">Scroll</a> or <a href="javascript:void(0)">play</a>
-                </p>
             </div>
         </section>
         <section id="videoSection" class="video-section">
@@ -70,7 +68,36 @@
                     <div>
                     </div>
                     <div>
-                        <a href="#" class="btn-white" title="Let’s Talk">Let’s Talk</a>
+                        <a href="javascript:void(0)" onclick="scrollToSection('contact')"class="btn-white" title="Let’s Talk">Let’s Talk</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="events" class="events">
+            <div class="container">
+                <h2>event</h2>
+                <div class="events-row">
+                    <div class="events-row--image">
+                        <img src="images/events-image.webp" alt="event">
+                    </div>
+                    <div class="events-row--details">
+                        <div class="events-row--item">
+                            <p>timings</p>
+                            <p>10 am to 6 pm</p>
+                        </div>
+                        <div class="events-row--item">
+                            <p>date</p>
+                            <p>13th july to 14th july</p>
+                        </div>
+                        <div class="events-row--item">
+                            <p>link to register</p>
+                            <a href="#">register now 
+                                <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.146484" y="0.109131" width="38.8723" height="38.8723" rx="19.4361" fill="white"/>
+                                    <path d="M13.8882 25.2399L25.2775 13.8506M25.2775 13.8506H16.7355M25.2775 13.8506V22.3926" stroke="#1C1C1C" stroke-width="2.2866" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,7 +139,7 @@
                 <p class="">These <i>services</i> represent our core areas of expertise, but we are also <i>open to exploring innovative projects</i> and technologies beyond the mentioned categories. At Kensaltensi, we are <i>committed to delivering outstanding results</i> that align with your business objectives and surpass your expectations.</p>
             </div>
         </section>
-        <section class="services-setup" id="about">
+        <section class="services-setup">
             <div class="container">
                 <h2>Services that set you up <br>for success</h2>
                 <div class="services-list--item flex">
@@ -295,7 +322,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="images/case-study-2.webp" alt="Jenny Co">
+                        <img src="images/case-study-2.webp" alt="Alkimi labs">
                     </div>
                 </div>
                 <a href="javascript:void(0)" class="btn-outline" title="View all Services">View more projects</a>
@@ -315,9 +342,7 @@
             <img src="images/kensaltensi.svg" alt="kensaltensi" title="kensaltensi">
             <div class="footer-row flex">
                 <a href="mailto:hello@kensaltensi.org" title="hello@kensaltensi.org">hello@kensaltensi.org</a>
-                <p>#55/c, Nandi Mansion, <br />
-                    40th Cross, Jayanagar 8th <br />
-                    Block, Bangalore - 560070</p>
+                <p>OFFICE <br />BANGALORE, LONDON, PARIS, <br /> BARCELONA, PRAGUE</p>
             </div>
             <form action="" class="contact-form">
                 <input type="email" name="email" id="email" required placeholder="Email" />
@@ -338,7 +363,7 @@
 
             });
             $(window).scroll(function() {
-                if ($(this).scrollTop() > 200) {
+                if ($(this).scrollTop() > 100) {
                     $('header').fadeIn();
                 } else {
                     $('header').fadeOut();
@@ -347,7 +372,7 @@
             $(document).ready(function() {
                 var $scrollDiv = $('.scrollable-div');
                 var $scrollContent = $('.scrollable-div--scroll');
-                var scrollSpeed = 7000;
+                var scrollSpeed = 12000;
                 var pauseTime = 0;
                 var $clone = $scrollContent.clone();
                 $scrollContent.append($clone);
