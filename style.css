@@ -1292,4 +1292,28 @@ header .container {
         height: calc(100% - 70px);
         top: 70px;
     }
+    .services-setup h2 {
+        padding-top: 0px;
+        position: unset;
+    }
+    .services-list--item,.case-studies--item {
+        position: unset;
+        min-height: 0;
+    }
+    .case-studies h2 {
+        padding-top: 60px;
+        position: unset;
+    }
+    .btn-outline {
+        margin-top: 0px;
+    }
+    .case-studies  .btn-outline {
+        margin-top: 40px;
+    }
+    .events {
+        padding: 60px 0;
+    }
+    .services h2, .events h2 {
+        margin-bottom: 40px;
+    }
 }
