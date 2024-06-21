@@ -178,21 +178,19 @@ h2 {
 }
 .services-row {
     justify-content: space-between;
-    gap: 126px;
+    gap: 30px;
     margin-bottom: 102px;
+    flex-wrap: wrap;
 }
-.services-row > div:first-child {
-    width: 45%;
-}
-.services-row > div:first-child p {
+.services-row > div p {
     font-size: 28px;
     font-weight: 300;
     line-height: 34.56px;
     letter-spacing: -0.02em;
     text-align: left;
 }
-.services-row > div:last-child {
-    width: 55%;
+.services-row > div {
+    width: calc((100% / 3 ) - 20px);
 }
 .services-row .flex {
     gap: 50px;
@@ -1044,9 +1042,6 @@ header .container {
     }
     .banner-section, .services, .services-setup, .case-studies, section {
         padding: 80px 0;
-    } 
-    .services-row > div:first-child {
-        width: 54%;
     }
     .services-row {
         gap: 50px;
@@ -1131,22 +1126,23 @@ header .container {
         top: 70px;
         width: 100px;
     }
+    .services-row > div {
+        width: calc(50% - 30px);
+    }
 }
 @media only screen and (max-width: 767px) {
     .services-row {
         margin-bottom: 0;
+        gap: 24px;
     }
     .services-row {
         flex-direction: column;
     }
-    .services-row > div:first-child p {
-        font-size: 24px;
+    .services-row > div p {
+        font-size: 20px;
         line-height: 1.5;
     }
-    .services-row > div:first-child {
-        width: 100%;
-    }
-    .services-row > div:last-child {
+    .services-row > div {
         width: 100%;
     }
     .services-list--item--content {
