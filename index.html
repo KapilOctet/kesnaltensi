@@ -487,10 +487,12 @@
         <script>
             $('.navTrigger').click(function () {
                 $(this).toggleClass('active');
-                console.log("Clicked menu");
                 $("#mainListDiv").toggleClass("show_list");
                 $("#mainListDiv").fadeIn();
-
+            });
+            $('#mainListDiv .navlinks li a').click(function () {
+                $("#mainListDiv").removeClass("show_list");
+                $(".navTrigger").removeClass("active");
             });
             $(window).scroll(function() {
                 if ($(this).scrollTop() > 100) {
@@ -517,7 +519,7 @@
             });
             function scrollToSection(sectionId) {
                 $('html, body').animate({
-                    scrollTop: $('#' + sectionId).offset().top
+                    scrollTop: $('#' + sectionId).offset().top - 40
                 }, 100);
             }
         </script>
