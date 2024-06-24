@@ -382,7 +382,7 @@ h2 {
 .services-list--item + .services-list--item + .services-list--item + .services-list--item {
     z-index: 4;
 }
-.services-list--item:not(:nth-last-child(2)) {
+.services-list--item:not(:last-child) {
     border-bottom: 1px solid #FFFFFF26;
     padding-bottom: 40px;
     margin-bottom: 40px;
@@ -1302,7 +1302,7 @@ header .container {
         min-height: 0;
     }
     .case-studies h2 {
-        padding-top: 60px;
+        padding-top: 30px;
         position: unset;
     }
     .btn-outline {
